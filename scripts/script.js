@@ -1,3 +1,4 @@
+// Chooses rock paper or scissor for the computer
 function computerPlay() {
     let computerPick = Math.floor(Math.random() * 3) + 1;
     if (computerPick === 1){
@@ -15,6 +16,7 @@ function computerPlay() {
 let scoreCheck;
 let playerPick = prompt(`Choose your weapon`, ``);
 
+// Plays 1 round of rock paper scissors
 function playRound(playerSelection = playerPick, computerSelection = computerPlay()){
     playerSelection = playerSelection.toLowerCase();
     if (playerSelection === `rock` && computerSelection === `scissors` || playerSelection === `paper` && computerSelection === `rock` || playerSelection === `scissors` && computerSelection === `paper`){
@@ -31,7 +33,7 @@ function playRound(playerSelection = playerPick, computerSelection = computerPla
     }
 }
 
-
+// Plays 5 rounds of rock paper scissors and sums the score at the end
 function game(){   
     let playerScore = 0;
     let computerScore = 0;
