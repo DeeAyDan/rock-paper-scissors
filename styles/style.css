@@ -1,0 +1,10 @@
+body {
+    background-color: rgb(53, 49, 49);
+}
+div {
+    display:block;
+    position:relative;
+    width:max-content;
+    margin-left: auto;
+    margin-right: auto;
+}
