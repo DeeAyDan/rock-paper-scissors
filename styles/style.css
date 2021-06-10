@@ -16,9 +16,6 @@ button {
 .player-button:hover{
     scale:1.2;
     box-shadow: 0px 0px 10px 5px #feddbe}
-.hover-effect{
-    scale:1.2;
-    box-shadow: 0px 0px 10px 5px #feddbe}
 .ai-button{
     background-color: brown;}
 .rock {
@@ -99,5 +96,4 @@ button {
     border-width: 5px;
     border: solid black;
     width: 280px;
-    height: 280px;
-}
+    height: 280px;}
