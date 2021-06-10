@@ -6,17 +6,21 @@
 </head>
 
 <body>
-    <div class='buttons'>
-        <button id='rock'>Rock</button>
-        <button id='paper'>Paper</button>
-        <button id='scissors'>Scissors</button>
-    </div>
-    <div >
-        <p class='runningScore'></p>
-    </div>
-    <div id='results'>
-        <p class='resultText'></p>
-    </div>
+    
+    <div id="main-box">
+        <div id="player-zone">
+            <div class="name">Player</div>
+            <button class="rock player-button"><img src="imgs/rock.png"></button>
+            <button class="papper player-button""><img src="imgs/paper.png"></button>
+            <button class="scissors player-button""><img src="imgs/scissors.png"></button>
+        </div>
+
+        <div id="ai-zone">
+            <div class="name">AI</div>
+            <button class="rock"><img src="imgs/rock.png"></button>
+            <button class="papper"><img src="imgs/paper.png"></button>
+            <button class="scissors"><img src="imgs/scissors.png"></button>
+        </div>
 
     <script src="scripts/script.js"></script>
 </body>
