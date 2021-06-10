@@ -4,22 +4,26 @@
     <link rel='stylesheet' href="styles/style.css">
 
 </head>
-
 <body>
     
     <div id="main-box">
         <div id="player-zone">
             <div class="name">Player</div>
-            <button class="rock player-button"><img src="imgs/rock.png"></button>
-            <button class="papper player-button""><img src="imgs/paper.png"></button>
-            <button class="scissors player-button""><img src="imgs/scissors.png"></button>
+            <button id="player-rock" class="rock player-button"><img src="imgs/rock.png"></button>
+            <button id="player-paper" class="paper player-button""><img src="imgs/paper.png"></button>
+            <button id="player-scissors" class="scissors player-button""><img src="imgs/scissors.png"></button>
         </div>
-
+        <div id="score">0 - 0
+        </div>
+        <div id="outcome-message">
+        </div>
+        <div id="winner-icon"><img id="winner-picture">
+        </div>
         <div id="ai-zone">
-            <div class="name">AI</div>
-            <button class="rock"><img src="imgs/rock.png"></button>
-            <button class="papper"><img src="imgs/paper.png"></button>
-            <button class="scissors"><img src="imgs/scissors.png"></button>
+            <div class="name" style="color:brown">AI</div>
+            <button id="ai-rock" class="rock ai-button"><img src="imgs/rock.png"></button>
+            <button id="ai-paper" class="paper ai-button"><img src="imgs/paper.png"></button>
+            <button id="ai-scissors" class="scissors ai-button"><img src="imgs/scissors.png"></button>
         </div>
 
     <script src="scripts/script.js"></script>

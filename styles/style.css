@@ -16,9 +16,14 @@ button {
 .player-button:hover{
     scale:1.2;
     box-shadow: 0px 0px 10px 5px #feddbe}
+.hover-effect{
+    scale:1.2;
+    box-shadow: 0px 0px 10px 5px #feddbe}
+.ai-button{
+    background-color: brown;}
 .rock {
     top:100px;}
-.papper {
+.paper {
     top: 120px;}
 .scissors{
     top: 140px;}
@@ -34,9 +39,7 @@ button {
     font-style: normal;
     font-variant: normal;
     font-weight: 400;
-    line-height: 20px;
-}
-
+    line-height: 20px;}
 #main-box{
     border: solid black;
     border-width: 0px;
@@ -46,16 +49,55 @@ button {
     top: calc(50% - 250px);
     background-color: #0a1931;
     width: 600px;
-    height: 500px;
-}
+    height: 500px;}
 #player-zone{
     position: absolute;
     width: 160px;
-    height: 500px;
-}
+    height: 500px;}
 #ai-zone{
     position:absolute;
     right:0;
     width: 160px;
-    height: 500px;
+    height: 500px;}
+#score{
+    position: absolute;
+    width: 280px;
+    height: 100px;
+    left: 160px;
+    top: 10px;
+    font-family: Impact, Haettenschweiler, Franklin Gothic Bold, Charcoal, Helvetica Inserat, Bitstream Vera Sans Bold, Arial Black, sans serif;
+    font-size: 50px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 100;
+    line-height: 68px;
+    color: #feddbe;
+    text-align: center;
+    padding-top: 25px;}
+#outcome-message{
+    position: absolute;
+    width: 280px;
+    height: 100px;
+    left: 160px;
+    top: 110px;
+    font-family: Impact, Haettenschweiler, Franklin Gothic Bold, Charcoal, Helvetica Inserat, Bitstream Vera Sans Bold, Arial Black, sans serif;
+    font-size: 50px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 100;
+    line-height: 68px;
+    color: #feddbe;
+    text-align: center;
+    padding-top: 25px;}
+#winner-icon{
+    position: absolute;
+    width: 280px;
+    height: 280px;
+    left: 160px;
+    top: 210px;}
+#winner-picture{
+    border-width: 5px;
+    border: solid black;
+    width: 280px;
+    height: 280px;
 }

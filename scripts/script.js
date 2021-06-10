@@ -1,10 +1,9 @@
-// Chooses rock paper or scissor for the computer
-function computerPlay() {
-    let computerPick = Math.floor(Math.random() * 3) + 1;
-    if (computerPick === 1){
+function aiPlay() {
+    const aiPick = Math.floor(Math.random() * 3) + 1;
+    if (aiPick === 1){
        return `rock`;
     }
-    else if (computerPick === 2){
+    else if (aiPick === 2){
        return `paper`
     }
     else{
@@ -12,56 +11,78 @@ function computerPlay() {
     }
 
 }
+const buttons = document.querySelectorAll('.player-button');
+const aiRock = document.querySelector('#ai-rock');
+const aiPaper = document.querySelector('#ai-paper');
+const aiScissors = document.querySelector('#ai-scissors');
+const score = document.querySelector('#score');
+const outcomeMessage = document.querySelector('#outcome-message');
+const picture = document.querySelector('#winner-picture');
 let playerPick;
-let scoreCheck;
 let playerScore = 0;
-let computerScore = 0;
-
-const para = document.querySelector('.resultText');
-const runningScore = document.querySelector('.runningScore');
-const buttons = document.querySelectorAll('button');
+let aiScore = 0;
 
 buttons.forEach((button) => {
     button.addEventListener('click', function(e){
         playerPick = button.id;
-        console.log(playRound());
-        para.textContent = playRound();
-        if(scoreCheck === 1){
-            ++playerScore;
-            runningScore.textContent = `${playerScore} - ${computerScore}`
-        }
-        else if(scoreCheck === 2){
-            ++computerScore;
-            runningScore.textContent = `${playerScore} - ${computerScore}`
-        }
-
-        if(playerScore === 5){
-            runningScore.textContent = `You won the game!`
-        }
-        else if (computerScore === 5){
-            runningScore.textContent = `You lost the game!`
-        }
-        
-
+        playRound();
     })
     
 })
 
-
-
-// Plays 1 round of rock paper scissors
-function playRound(playerSelection = playerPick, computerSelection = computerPlay()){
-        scoreCheck = 0
-    if (playerSelection === `rock` && computerSelection === `scissors` || playerSelection === `paper` && computerSelection === `rock` || playerSelection === `scissors` && computerSelection === `paper`){
-        scoreCheck = 1
-        return `You won! ${playerSelection} beats ${computerSelection}.`
+function playRound(playerSelection = playerPick, computerSelection = aiPlay()){
+    if (playerSelection === `player-rock` && computerSelection === `scissors`){
+        playerScore++;
+        score.textContent = `${playerScore} - ${aiScore}`;
+        outcomeMessage.textContent = `Player wins!`;
+        aiScissors.setAttribute('class', 'hover-effect');
+        picture.setAttribute('style', 'background-color: #03256c;');
+        picture.setAttribute('src', 'imgs/rock.png');
+    }
+    else if (playerSelection === `player-paper` && computerSelection === `rock`){
+        playerScore++;
+        score.textContent = `${playerScore} - ${aiScore}`;
+        outcomeMessage.textContent = `Player wins!`;
+        aiRock.setAttribute('class', 'hover-effect');
+        picture.setAttribute('style', 'background-color: #03256c;');
+        picture.setAttribute('src', 'imgs/paper.png');
+    }
+    else if (playerSelection === `player-scissors` && computerSelection === `paper`){
+        playerScore++;
+        score.textContent = `${playerScore} - ${aiScore}`;
+        outcomeMessage.textContent = `Player wins!`;
+        aiPaper.setAttribute('class', 'hover-effect');
+        picture.setAttribute('style', 'background-color: #03256c;');
+        picture.setAttribute('src', 'imgs/scissors.png');
+    }
+    else if (playerSelection === `player-rock` && computerSelection === `paper`){
+        aiScore++;
+        score.textContent = `${playerScore} - ${aiScore}`;
+        outcomeMessage.textContent = `AI wins!`;
+        aiPaper.setAttribute('class', 'hover-effect');
+        picture.setAttribute('style', 'background-color: brown;');
+        picture.setAttribute('src', 'imgs/paper.png');
+    }
+    else if (playerSelection === `player-paper` && computerSelection === `scissors`){
+        aiScore++;
+        score.textContent = `${playerScore} - ${aiScore}`;
+        outcomeMessage.textContent = `AI wins!`;
+        aiScissors.setAttribute('class', 'hover-effect');
+        picture.setAttribute('style', 'background-color: brown;');
+        picture.setAttribute('src', 'imgs/scissors.png');
+    }
+    else if (playerSelection === `player-scissors` && computerSelection === `rock`){
+        aiScore++;
+        score.textContent = `${playerScore} - ${aiScore}`;
+        outcomeMessage.textContent = `AI wins!`;
+        aiRock.setAttribute('class', 'hover-effect');
+        picture.setAttribute('style', 'background-color: brown;');
+        picture.setAttribute('src', 'imgs/rock.png');
     }
     else if (playerSelection === computerSelection){
-        scoreCheck = 0
-        return `It's a tie between ${playerSelection} and ${computerSelection}`
-    }
-    else {
-        scoreCheck = 2
-        return `You lost! ${computerSelection} beats ${playerSelection}.`
+        score.textContent = `${playerScore} - ${aiScore}`;
+        outcomeMessage.textContent = `It's a tie!`;
+        aiRock.setAttribute('class', 'hover-effect'); 
+        picture.setAttribute('src', 'imgs/tie.png');
     }
 }
