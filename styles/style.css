@@ -16,6 +16,9 @@ button {
 .player-button:hover{
     scale:1.2;
     box-shadow: 0px 0px 10px 5px #feddbe}
+.player-button:active{
+    scale:1;
+    box-shadow: 0px 0px 10px 5px #feddbe}
 .ai-button{
     background-color: brown;}
 .rock {
@@ -97,3 +100,27 @@ button {
     border: solid black;
     width: 280px;
     height: 280px;}
+#reset{
+    position:absolute;
+    width: 100px;
+    height: 40px;
+    top: -50px;
+    left: 15;}
+#reset-button{
+    width: 100px;
+    height: 40px;
+    background-color: #0a1931;
+    color: #185adb;
+    font-family: Impact, Haettenschweiler, Franklin Gothic Bold, Charcoal, Helvetica Inserat, Bitstream Vera Sans Bold, Arial Black, sans serif;
+    font-size: 20px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400;
+    line-height: 20px;
+    transition-duration: 100ms;}
+#reset-button:hover{
+    scale:1.2;
+    box-shadow: 0px 0px 10px 5px #feddbe;}
+#reset-button:active{
+    scale:1.1;
+    box-shadow: 0px 0px 10px 5px #feddbe;}
