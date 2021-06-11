@@ -25,9 +25,9 @@ buttons.forEach((button) => {
             return alert(`The game is over, please refresh the page.`)}
         else {
         playerPick = button.id;
-        aiScissors.setAttribute('style', '');
-        aiRock.setAttribute('style', '');
-        aiPaper.setAttribute('style', '');
+        aiScissors.removeAttribute('style');
+        aiRock.removeAttribute('style');
+        aiPaper.removeAttribute('style');
         playRound();
         if (playerScore === 5){
             outcomeMessage.setAttribute('style', 'font-size:25px');
@@ -104,11 +104,11 @@ reset.addEventListener('click', function(e){
     playerScore = 0;
     aiScore = 0;
     score.textContent = `${playerScore} - ${aiScore}`;
-    picture.setAttribute('style', '');
-    picture.setAttribute('src', '');
+    picture.removeAttribute('style');
+    picture.removeAttribute('src');
     outcomeMessage.setAttribute('style', 'font-size:50px');
-    outcomeMessage.textContent = `Reseted`;
-    aiScissors.setAttribute('style', '');
-    aiRock.setAttribute('style', '');
-    aiPaper.setAttribute('style', '');
+    outcomeMessage.textContent = `New game`;
+    aiScissors.removeAttribute('style');
+    aiRock.removeAttribute('style');
+    aiPaper.removeAttribute('style');
 })
