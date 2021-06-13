@@ -106,7 +106,7 @@ reset.addEventListener('click', function(e){
     score.textContent = `${playerScore} - ${aiScore}`;
     picture.removeAttribute('style');
     picture.removeAttribute('src');
-    outcomeMessage.setAttribute('style', 'font-size:50px');
+    outcomeMessage.setAttribute('style', 'font-size:38px');
     outcomeMessage.textContent = `New game`;
     aiScissors.removeAttribute('style');
     aiRock.removeAttribute('style');
